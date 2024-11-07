@@ -1,0 +1,123 @@
+/* Definições gerais de corpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(45deg, red, blue, black);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+h1, h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    animation: textSlide 3s ease-in-out infinite;
+}
+
+h2 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+}
+
+/* Animação para o fundo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+     50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animação para os textos */
+@keyframes textSlide {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Formulários e inputs */
+form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+input, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+button {
+    background: red;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: darkred;
+}
+
+/* Containers principais */
+.login-container, .panel-container, .admin-container {
+    text-align: center;
+    color: white;
+}
+
+.error {
+    color: #f00;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.results {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .login-container form,
+    .panel-container form {
+        width: 100%;
+    }
+}
